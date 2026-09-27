@@ -1,4 +1,6 @@
 #Python编程：从入门到实践，这本书的每一章节例题，我都会以文件形式，文件名区分，来编写学习
+
+#变量
 message="i love you"
 print(message)
 coke="xiaomaolaodi"
@@ -27,3 +29,8 @@ print(message1)
 
 message1coke="homework"
 print(message1coke)
+
+#不能识别变量的两种可能：1，忘记赋值 2，你字母拼错了。所以，细心一点！！
+
+#better定义：变量是可以被赋值的标签，也可以说变量指向特定的值
+#书中的“打印”即指“print”，其实是“输出”之意，而非中文语境中的“打印东西”之意
