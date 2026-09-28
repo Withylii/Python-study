@@ -157,6 +157,8 @@ print("aoisfjsdhvuowhvjfwhbowfu\thahahaha\nouhcd\t\t\t\taodf")
 #!.rstrip() 方法为删除变量右侧多余空白
 #!.lstrip() 方法为删除变量左侧多余空白
 #!.strip()  方法为删除变量两侧多余空白
+#!进阶用法：括号内输入指定内容，便可精确删除两端所有的指定内容。其实括号内无内容就相当于要去除空白
+#!以上方法不会改变原变量，需永久更改要重新定义覆盖
 her_name='chihaya  '
 print(her_name.rstrip())
 print(her_name)
@@ -164,11 +166,15 @@ print(her_name)
 her_name='haruga  '
 her_name=her_name.strip()
 print(her_name)
+n='aiohfuea'
+print(n.strip('a'))
 
 
 
 #?删除前缀
 #!.removeprefix(所去前缀)   方法为去掉前缀
+#!.removesuffix(所去后缀)   方法为去掉后缀
+#!以上方法皆是精确去除，比如开头为bc，那么。removeprefix（abc）则不会生效，后缀亦然
 #!因为去掉的是文本，所以方法括号内，必须也加上引号！！！
 s='handsome_guy'
 print(s.removeprefix('handsome'))
