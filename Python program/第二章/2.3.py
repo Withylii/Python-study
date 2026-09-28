@@ -116,9 +116,12 @@ print(f'nice to meet you,{full_name}!')
 #!如果print（）内有文本类型内容，则需要用字符串，也可以先用变量表示成文本，再直接输入变量。但f字符串可以文本变量直接拼接
 p=f'gold'
 print(f'{p.upper()}')
-#!大括号外面是“普通文本区”
-
-
-
+#!大括号外面是“普通文本区”，你需要在大括号内进行变量方法操作！
+#!f字符串的方法，要写在大括号内！
 
 #*使用指标符或换行符来添加 空白
+#空白，泛指任何非打印字符，如空格、制表符、换行符。空白可以用来组织输出，便于阅读
+#制表符字符组合：\t
+#换行符字符组合：\n
+print('\tkongge')
+print("aoisfjsdhvuowhvjfwhbowfu\thahahaha\nouhcd\t\t\t\taodf")
