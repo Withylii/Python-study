@@ -33,7 +33,7 @@ print(k)
 #?修改字符串大小写的方法
 #!"方法"在python里是什么东西？方法（method）是python可以对数据（变量、值、字符串）执行的各类操作，包括.title()、.upper()、.lower()、.strip()，这些都是方法
 #!有的method括号内不加东西功能就行，比如.title()，只是为了保持统一。但比如.count()的括号内必须得加东西，因为这方法代表了你要数什么东西的数量，括号内就是你要找的东西的名字
-#!方法的(.)的前面，需要写你方法所操作执行的对象（即变量、值、字符串、whatever）
+#!方法的(.)的前面，需要写你方法所操作执行的对象（即变量、值、字符串、whatever），必须是变量等才可以使方法行得通！不要打出来.upper()的纯文本！
 #.title()：每个单词首字母大写
 #.upper()：全大写
 #.lower()：全小写（机器人指令常用来做大小写兼容，比如接收的指令是 "FORWARD"，你转成小写 "forward" 再判断）
@@ -124,18 +124,51 @@ print(f'nice to meet you,{full_name}!')
 #!print(f'full_name')≠print(full_name)，前者通过f字符串，只输入文本本身。后者才是真正输出你先定定义了的full_name的值！
 #!如果print（）内有文本类型内容，则需要用字符串，也可以先用变量表示成文本，再直接输入变量。但f字符串可以文本变量直接拼接
 p=f'gold'
+print("this is a "+p.upper()+" bowl.")
+print("this is a "+"p".upper()+" bowl.")
+print("this is a "+"p.upper()"+" bowl.")    #引号位置的强大作用
+print(("this is a "+"p.upper()"+" bowl.").upper()) 
+p=f'gold'
+print(f'this is a {p.upper()} bowl.')       #鲜明对比，相同结果，字符串与f字符串方法的用法区别，还是f字符串直观啊
 print(f'{p.upper()}')
-print(f'{"misaki".upper()}')
+
+print(f'{"misaki".upper()}')    #f字符串的方法写在大括号内
+print('misaki'.upper())         #字符串的方法写在变量后，小括号内
 #!大括号外面是“普通文本区”，你需要在大括号内进行变量方法操作！
 #!f字符串的方法，要写在大括号内！
 #!这是与正常字符串不同的！相当于普通字符串的基本单位以“”或变量形式处理，而f字符串的变量表示是{},方法要在大括号内进行,其f''就是个大网兜，不是单位！出了{}就是文本，方法行不通！
+print(f'this is a {p.upper()} bowl.'.upper())  #似乎，f字符串也可以在f''外接方法，本质还是因为这总体是个字符串，所以所有内容都会大写。所以相当于f''整体是个可操作对象，内部的可操作对象就要用{}了
+print(f'{"hatsune".upper()} Miku')
 
 
 
 #?使用指标符或换行符来添加 空白
 #空白，泛指任何非打印字符，如空格、制表符、换行符。空白可以用来组织输出，便于阅读
-#制表符字符组合：\t。制表符就相当于一组空格，就是tab键，对齐用的
-#换行符字符组合：\n。
+#!制表符字符组合：\t。制表符就相当于一组空格，就是tab键，对齐用的
+#!换行符字符组合：\n。
 #!制表符换行符基本只能在字符串内使用
 print(f'\t\t\t\tkongge'.upper())
 print("aoisfjsdhvuowhvjfwhbowfu\thahahaha\nouhcd\t\t\t\taodf")
+#制表符可以用来对齐，就是表格对齐，非常有利于美观输出
+
+
+
+#?删除空白
+#!.rstrip() 方法为删除变量右侧多余空白
+#!.lstrip() 方法为删除变量左侧多余空白
+#!.strip()  方法为删除变量两侧多余空白
+her_name='chihaya  '
+print(her_name.rstrip())
+print(her_name)
+#或者用变量覆盖，直接新变量设定为使用了方法后的旧变量
+her_name='haruga  '
+her_name=her_name.strip()
+print(her_name)
+
+
+
+#?删除前缀
+#!.removeprefix(所去前缀)   方法为去掉前缀
+#!因为去掉的是文本，所以方法括号内，必须也加上引号！！！
+s='handsome_guy'
+print(s.removeprefix('handsome'))
