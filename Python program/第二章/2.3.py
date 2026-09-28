@@ -102,9 +102,23 @@ print(f"周长是 {2 * 3.14 * r}")
 #!f字符串引号内，大括号外，普通文本，遵循单双复用，反斜杠法则。但是大括号{}内，只能单双复用，反斜杠绝对不能用！！！！最好用变量中转！
 #!f字符串还可以用来表示变量的值
 #!f字符串也是字符串，是最终输出的东西
-first_name="Hoshii"
-last_name='Miki'
-full_name=f'{first_name} {last_name}'
-message=f'Hello,{full_name}!'
+#!变量才是操作对象，值只是设定的
+#!至于你用字符串还是f字符串，对于值的定义无所谓，但是
+first_name=f"Hoshii"
+last_name=f'Miki'
+full_name=f'{first_name} {last_name}'#此步就已经表示变量的值通过字符串操作完了，结果会是纯文本
+message=f'Hello,{full_name}!'#同理，下步print就不需要再加字符串了，因为变量的值已经是纯文本了。否则print加字符串就只会是另一个文本，无变量含义
+print(f"full_name")
 print(full_name)
 print(message)
+print(f'nice to meet you,{full_name}!')
+#!print(f'full_name')≠print(full_name)，前者通过f字符串，只输入文本本身。后者才是真正输出你先定定义了的full_name的值！
+#!如果print（）内有文本类型内容，则需要用字符串，也可以先用变量表示成文本，再直接输入变量。但f字符串可以文本变量直接拼接
+p=f'gold'
+print(f'{p.upper()}')
+#!大括号外面是“普通文本区”
+
+
+
+
+#*使用指标符或换行符来添加 空白
