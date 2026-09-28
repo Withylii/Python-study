@@ -157,7 +157,6 @@ print("aoisfjsdhvuowhvjfwhbowfu\thahahaha\nouhcd\t\t\t\taodf")
 #!.rstrip() 方法为删除变量右侧多余空白
 #!.lstrip() 方法为删除变量左侧多余空白
 #!.strip()  方法为删除变量两侧多余空白
-#!进阶用法：括号内输入指定内容，便可精确删除两端所有的指定内容。其实括号内无内容就相当于要去除空白
 #!以上方法不会改变原变量，需永久更改要重新定义覆盖
 her_name='chihaya  '
 print(her_name.rstrip())
@@ -166,6 +165,7 @@ print(her_name)
 her_name='haruga  '
 her_name=her_name.strip()
 print(her_name)
+#!进阶用法：括号内输入指定内容，便可精确删除两端所有的指定内容。其实括号内无内容就相当于要去除空白
 n='aiohfuea'
 print(n.strip('a'))
 
