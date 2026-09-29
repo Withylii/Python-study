@@ -3,6 +3,7 @@
 #The Zen of Python
 #使用python的哲学
 #在Pyhton终端输入指令：import this，即可领悟派森哲学理念！
+
 #The Zen of Python, by Tim Peters
 
 #Beautiful is better than ugly.
