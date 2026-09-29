@@ -6,3 +6,4 @@ print(f'{s}{tools[0]}{m}')
 print(f'{s}{tools[1]}{m}')
 print(f'{s}{tools[2]}{m}')
 print(f'{s}{tools[3]}{m}')
+#引入for语句，就不用再重复打了！！
