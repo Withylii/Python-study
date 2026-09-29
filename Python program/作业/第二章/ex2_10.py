@@ -11,3 +11,5 @@ print(int(n))
 
 print(1.)
 print(.5)
+print(1e100)
+print(2.4e10)
