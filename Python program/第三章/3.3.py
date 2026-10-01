@@ -40,3 +40,15 @@ list=['xrmisde','amiside','xudiaomao']
 list.reverse()
 print(list)
 #!原地修改（In-place Modification）的无返回值陷阱，仅能单独列出一步操作，不能直接打印或新变量赋值，否则输出为none！！！
+
+
+
+#?确定列表的长度
+#使用len（）函数，可以确定列表长度
+#!这是一个有返回值的函数
+list=['xrmisde','amiside','xudiaomao']
+list=len(list)
+print(list)
+
+list=['xrmisde','amiside','xudiaomao']
+print(len(list))
