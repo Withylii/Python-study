@@ -52,3 +52,7 @@ print(list)
 
 list=['xrmisde','amiside','xudiaomao']
 print(len(list))
+
+
+
+#?注意索引
