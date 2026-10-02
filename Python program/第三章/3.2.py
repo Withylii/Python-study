@@ -22,7 +22,7 @@ print(mygo)
 #*2.在列表中插入元素
 #通过方法.insert(索引位置，插入内容)，以实现。
 #这个插入的意思是，在插入后，你插入的元素将会到你指定的索引位，而不是指原先的索引位。
-project=['chihaya','haruga','miki']
+project=['chihaya','haruka','miki']
 project.insert(3,'nami')
 print(project)
 #这种操作可以理解为，先将所有既有元素先都向右移一个位置，然后在选定插入的索引位上，如果有元素，就将此元素及其左侧所有元素向左移一位补空。
@@ -32,7 +32,7 @@ print(project)
 #?从列表中删除元素
 #*1.使用del语句删除元素
 #del 列表变量[索引位]
-project=['chihaya','haruga','miki']
+project=['chihaya','haruka','miki']
 del project[1]
 print(project)
 
@@ -49,7 +49,7 @@ print(project)
 #!用编程的严谨术语来说，变量 = 列表.pop() 这个操作完成了两个原子动作：
 #!移交所有权：把最后一个元素的值“复制”给了左边的变量。
 #!原地剔除：把它从原列表中“物理移除”，列表长度永久减 1。
-project=['chihaya','haruga','miki']
+project=['chihaya','haruka','miki']
 p=project.pop(1)
 print(project)
 print(p)
@@ -58,7 +58,7 @@ print(p)
 #*4.根据值删除元素
 #通过.remove(剔除变量的值)方法，以实现。无返回值
 #删除的变量，你可以通过使其赋值为一个新的变量，来保留
-project=['chihaya','haruga','miki']
+project=['chihaya','haruka','miki']
 project.remove('miki')
 print(project)
 #如果列表里有多个相同的值，.remove() 只会干掉第一个，后面的它不管。如果你要全删，得用循环。

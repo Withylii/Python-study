@@ -163,7 +163,7 @@ her_name='chihaya  '
 print(her_name.rstrip())
 print(her_name)
 #或者用变量覆盖，直接新变量设定为使用了方法后的旧变量
-her_name='haruga  '
+her_name='haruka  '
 her_name=her_name.strip()
 print(her_name)
 #!进阶用法：括号内输入指定内容，便可精确删除两端所有的指定内容。其实括号内无内容就相当于要去除空白
