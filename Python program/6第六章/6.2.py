@@ -51,6 +51,58 @@ key['红色系']='岛村卯月'
 print(f'我最喜欢的小偶像是{key['红色系']}')
 print(f'\n')
 
+player={'x':0,
+        'y':24,
+        'speed':'fast'
+        }
+print(f'原先位置x坐标为{player['x']}')
+s1=1
+s2=2
+s3=3
+if player['speed'] =='fast':
+   player['x']=player['x']+s3
+elif player['speed'] =='slow':
+   player['x']=player['x']+s2
+else:
+   player['x']=player['x']+s1
+print(f'现在玩家位置位于x坐标{player['x']}')
+print(f'\n')
 
 
-#?
+
+#?删除键值对
+#对于不需要的信息，可使用del语句
+#del 字典[键名]
+#注意，使用del语句时，必须指定字典名和要删除的键
+key={'red':'haruka',
+     'blue':'chihaya',
+     'yellow':'miki',
+     'mama':'azusa'
+}
+del key['red']
+print(key)
+print(f'\n')
+
+
+
+#?由类似的对象组成的字典
+#相似对象多的话，用分行，但不要忘了冒号、逗号、以及每行的缩进要对齐
+
+
+
+#?使用get()来访问值
+#使用方括号内的键来获取值，在键不存在（未定义）的情况下，会出现问题，会报错
+#为避免，可以用.get（）方法在需要的键不存在时，返回一个默认值
+#.get()方法第一个参数用以指定键，必不可少。第二个参数为当指定的值不存在时要返回的值，是可选的。
+#如果第一个参数（键）已经存在，且它本身有值，那么你再输入第二个参数（默认值），Python 会完全无视第二个参数，直接输出原本的那个值。
+#!.get()方法不修改字典的任何东西！只是拿出来看，如果没有，那就返回一个默认值，但绝对不会修改！！！！！
+#.get()方法有返回值
+key={'red':'haruka',
+     'blue':'chihaya',
+     'yellow':'miki',
+     'mama':'azusa'
+}
+print(key.get('white','四条贵音'))
+print(key.get('red','四条贵音'))
+#如果制定的键有可能不存在，则应使用.get()方法，而不是用方括号表示法
+#比如用户没有输入值时，则需要用get来保证有一个默认值
