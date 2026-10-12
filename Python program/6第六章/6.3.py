@@ -38,7 +38,7 @@ idol={'red':'天海春香',
       'yellow':'星井美希',
       'mama':'三浦梓'
       }
-for girl in idol:
+for girl in idol:          #默认啥也不打，是和.key()方法有关的，和.items()无关
     print(girl)
 print(f'\n')
 #如果你不用.keys()方法，python则会默认遍历字典中的所有键
@@ -53,11 +53,25 @@ for girl in idol.keys():
     if girl == 'red' or girl == 'mama':       #说明这里girl还是一个键，只有 字典[键名] 才指代的是键的值
         fav=idol[girl]
         print(f'\t顺带一提，{fav}是我非常喜欢的偶像！')
+print(f'\n')
 
 
 
 #?按特定的顺序遍历字典中的所有键
+#使用sorted()函数，按首字母排序，字符顺序大小排序。
+#使用sorted()函数来获得按特定顺序排列的副本
+#貌似这个只能按键名首字母来排序？？？！
+idol={'red':'haruka',
+      'blue':'chihaya',
+      'yellow':'miki',
+      'mama':'azusa'
+      }
+l=sorted(idol.values())
+for type in l:
+    print(f'这位是小偶像{type}')
 
 
 
 #?遍历字典中的所有值
+#使用.values()方法，会给你返回一个字典里所有值的列表
+#如果你想剔除重复项，可以用set()函数
