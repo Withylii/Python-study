@@ -5,7 +5,12 @@
 
 
 #?字典列表
-
+aliens=[]
+for alien_number in range(30):
+    new_alien={'color':'blue'}
+    aliens.append(new_alien)
+for n in range(1,31):
+    print(n)
 
 
 #?
