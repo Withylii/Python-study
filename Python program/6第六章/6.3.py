@@ -69,9 +69,28 @@ idol={'red':'haruka',
 l=sorted(idol.values())
 for type in l:
     print(f'这位是小偶像{type}')
+print(f'\n')
 
 
 
 #?遍历字典中的所有值
 #使用.values()方法，会给你返回一个字典里所有值的列表
 #如果你想剔除重复项，可以用set()函数
+#set()函数会输出一个去掉重复键值的集合。注意！是一个集合！！！
+#集合和字典很容易混淆，因为它们都是用一对花括号定义的。
+#当花括号内没有键值对时，定义的很可能是集合
+#不同于列表和字典，集合不会以特定的顺序存储元素。集合，是随机无序的！！！
+idol={'red':'haruka',
+      'blue':'chihaya',
+      'yellow':'miki',
+      'hoshii':'miki',
+      'mama':'azusa'
+      }
+l=sorted(set(idol.values()))
+for type in l:
+    print(type.title())
+#!使用set()函数，生成的内容是随机无序的！！
+#列表（List）是有序的“排队”，字典（Dict，Python 3.7+）是按插入顺序排队，而集合（Set）是“随便扔进袋子里的”，不排队。
+#按输入顺序，另寻方法
+#按字母顺序，sorted（）函数
+#集合
