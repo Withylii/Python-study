@@ -25,7 +25,6 @@ print(f'\n')
 #以这种方式，每个相同的字典其实都是互相独立的，只有这样我们才能独立的修改其中某一字典的值！
 #如果我们要修改其中的元素，可以用在for语句中用if条件，反正是列表呗，直接索引指定位置
 
-
 idols=[]
 for n in range(10):
     idol={'name':'haruka',
@@ -65,9 +64,31 @@ print(f'\n\n')
     
 
 
-
-
-
-
-
 #?在字典中存储字典
+idols={
+    'haruka':{
+        'style':'cute',
+        'color':'red',
+        'group':'765 production'
+             },
+    'chihaya':{
+        'style':'cool',
+        'color':'blue',
+        'group':'765 production' 
+              },
+    'miki':{
+        'style':'passion',
+        'color':'yellow',
+        'group':'765 production'
+           }
+      }
+for k,v in idols.items():
+    print(f'小偶像{k.title()}的基本信息如下：')
+    for n,inf in v.items():
+        print(f'\t{n.title()}:{inf.upper()}')
+    print(f'\n')
+
+#f'\t{n.title()}:{inf.upper()}'
+#.items()方法，只有一个变量的打包方式打印，会出现（）的包裹形式
+#而两个变量定义后，该方法会再包裹一个值的列表，所以打印出来的就是简介的，无括号的值了。
+#当然，要一个完美，自由的打印形式，还是字符串吧！
