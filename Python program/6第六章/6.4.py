@@ -50,11 +50,19 @@ print(f'\n')
 
 
 #?在字典中存储列表
-
-
-
-
-
+#在遍历储存了列表的字典中时，通常在for语句中还需要再嵌套一个for语句
+#列表和字典的嵌套层级不应太多。记得使用更简洁的方法吧！
+idols={'haruka':['83','56','82'],
+       'chihaya':['72','55','78'],
+       'miki':['86','55','83']
+       }
+for k,v in idols.items():
+    print(f'小偶像{k.title()}的三围是：')
+    for t in v:
+        print(f'\t{t}')
+    print(f'\n')
+print(f'\n\n')
+    
 
 
 

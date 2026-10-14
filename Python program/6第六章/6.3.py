@@ -38,7 +38,7 @@ idol={'red':'天海春香',
       'yellow':'星井美希',
       'mama':'三浦梓'
       }
-for girl in idol:          #默认啥也不打，是和.key()方法有关的，和.items()无关
+for girl in idol:          #默认啥也不打，是和.key()方法有关的。和.items()无关
     print(girl)
 print(f'\n')
 #如果你不用.keys()方法，python则会默认遍历字典中的所有键
